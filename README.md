@@ -16,7 +16,7 @@
 <dependency>
     <groupId>com.github.tellymc</groupId>
     <artifactId>TellyDatabases</artifactId>
-    <version>1.0.2</version>
+    <version>{Version right under Title}</version>
 </dependency>
 ```
 
