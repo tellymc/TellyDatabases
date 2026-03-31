@@ -24,7 +24,7 @@ public class DatabaseManager {
         this.plugin = plugin;
     }
 
-    private void initialize(Database database) {
+    public void initialize(Database database) {
 
         HikariConfig hikariConfig = database.getHikariConfig();
         if (hikariConfig == null) return;
