@@ -31,7 +31,7 @@ public class DatabaseManager {
 
         try {
 
-            DataSource dataSource = new HikariDataSource(hikariConfig);
+            HikariDataSource dataSource = new HikariDataSource(hikariConfig);
 
             try (Connection connection = dataSource.getConnection()) {
 
@@ -43,6 +43,8 @@ public class DatabaseManager {
             }
 
             plugin.getLogger().info("Database initializing was successful");
+
+            dataSources.put(database, dataSource);
 
         } catch (Exception e) {
             plugin.getLogger().log(Level.SEVERE, "Failed initializing database", e);
